@@ -50,18 +50,18 @@ class LinkedList:
         if self.head is None:
             return [None]
 
-    prevNode = None
-    current = self.head
-    nextNode = current.get_next()
+        prevNode = None
+        current = self.head
+        nextNode = current.get_next()
 
-    while current:
-        current.set_next(prevNode)
-        prevNode = current
-        current = nextNode
-        if nextNode:
-            nextNode = nextNode.get_next()
+        while current:
+            current.set_next(prevNode)
+            prevNode = current
+            current = nextNode
+            if nextNode:
+                nextNode = nextNode.get_next()
 
-    self.head = prevNode
+        self.head = prevNode
 
 # 1->2->3->None
 # ```
